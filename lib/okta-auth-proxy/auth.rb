@@ -15,7 +15,7 @@ module OktaAuthProxy
       end
 
       def authorized?(host)
-        if session[:uid]
+        if session[:session_id]
           return ENV['PROXY_TARGET']
         else
           return false
